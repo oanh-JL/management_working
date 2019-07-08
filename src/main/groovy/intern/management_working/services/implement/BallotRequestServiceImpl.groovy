@@ -22,7 +22,8 @@ class BallotRequestServiceImpl implements BallotRequestService {
 
     @Override
     List<Document> findByUserId(String userId) {
-        LookupOperation lookupOperation = LookupOperation.newLookup().from("ballot_requests").localField("user_id")
-                                                         .localFields
+//        LookupOperation lookupOperation = LookupOperation.newLookup().from("ballot_requests").localField("user_id")
+//                                                         .localFields
+    return  null
     }
 }

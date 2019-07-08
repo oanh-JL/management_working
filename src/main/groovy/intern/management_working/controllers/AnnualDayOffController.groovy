@@ -3,6 +3,7 @@ package intern.management_working.controllers
 import intern.management_working.models.database.AnnualDayOff
 import intern.management_working.models.response.SystemResponse
 import intern.management_working.services.AnnualDayOffService
+import org.bson.Document
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.DeleteMapping
@@ -25,10 +26,10 @@ class AnnualDayOffController {
         return service.create(annualDayOff)
     }
 
-    @GetMapping
-    List<AnnualDayOff> getAll () {
-        return service.getAll()
-    }
+//    @GetMapping
+//    List<Document> getAll () {
+//        return service.getAll()
+//    }
 
     @PutMapping
     ResponseEntity<SystemResponse> update (AnnualDayOff annualDayOff) {

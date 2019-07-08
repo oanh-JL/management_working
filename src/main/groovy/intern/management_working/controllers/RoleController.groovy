@@ -3,6 +3,7 @@ package intern.management_working.controllers
 import intern.management_working.models.database.Role
 import intern.management_working.models.response.SystemResponse
 import intern.management_working.services.RoleService
+import org.bson.Document
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.GetMapping
@@ -24,8 +25,8 @@ class RoleController {
         return service.create(role)
     }
 
-    @GetMapping("/{user_id}")
-    ResponseEntity<SystemResponse> retrieve(@PathVariable("user_id") String userId) {
-        return service.retrieve(userId)
+    @GetMapping("/{role_id}")
+    Document retrieve(@PathVariable("role_id") String roleId) {
+        return service.retrieve(roleId)
     }
 }

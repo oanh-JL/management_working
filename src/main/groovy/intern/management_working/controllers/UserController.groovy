@@ -40,9 +40,10 @@ class UserController {
 
     @PutMapping
     ResponseEntity<SystemResponse> update(
-            @RequestBody User user ) {
-       return service.update(user)
+            @RequestBody User user) {
+        return service.update(user)
     }
+
     @DeleteMapping("/{user_id}")
     ResponseEntity<SystemResponse> delete(
             @PathVariable("user_id") String userId

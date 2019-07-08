@@ -5,6 +5,7 @@ import intern.management_working.models.response.SystemResponse
 import intern.management_working.repositories.RoleRepository
 import intern.management_working.services.RoleService
 import intern.management_working.services.validator.RoleValidator
+import org.bson.Document
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
@@ -25,7 +26,7 @@ class RoleServiceImpl implements RoleService {
     }
 
     @Override
-    ResponseEntity<SystemResponse> retrieve(String userId) {
-        return null
+    Document retrieve(String roleId) {
+        return repository.findByRoleId(roleId) as Document
     }
 }

@@ -1,11 +1,8 @@
 package intern.management_working.services.validator
 
 import intern.management_working.models.database.User
-import intern.management_working.models.response.SystemResponse
 import intern.management_working.repositories.UserRepository
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.http.HttpStatus
-import org.springframework.http.ResponseEntity
 import org.springframework.stereotype.Component
 
 @Component

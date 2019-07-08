@@ -23,17 +23,15 @@ class AnnualDayOffServiceImpl implements AnnualDayOffService {
     ResponseEntity<SystemResponse> create(AnnualDayOff annualDayOff) {
 
         transfer.create(annualDayOff)
-        if (repository.save(annualDayOff)) {
-            return new ResponseEntity<SystemResponse>(SystemResponse.systemResponseMap.get("inserted"), HttpStatus.OK)
-        }
-        return new ResponseEntity<SystemResponse>(SystemResponse.systemResponseMap.get("error"), HttpStatus.BAD_REQUEST)
+        repository.save(annualDayOff)
+        return new ResponseEntity<SystemResponse>(SystemResponse.systemResponseMap.get("inserted"), HttpStatus.OK)
     }
 
-    @Override
-    List<AnnualDayOff> getAll() {
-
-        return repository.findAll()
-    }
+//    @Override
+//    List<Document> getAll() {
+//        return repository.getAllDayOff()
+//
+//    }
 
     @Override
     ResponseEntity<SystemResponse> update(AnnualDayOff annualDayOff) {
